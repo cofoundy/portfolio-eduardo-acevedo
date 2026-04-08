@@ -1,0 +1,132 @@
+---
+import { siteConfig } from "../config";
+---
+
+<section id="trayectoria" class="bg-white py-16 sm:py-20 lg:py-24">
+  <div class="max-w-5xl mx-auto px-5">
+    <!-- Section header -->
+    <div class="text-center mb-14 reveal">
+      <span
+        class="inline-block text-xs font-semibold tracking-widest uppercase mb-3"
+        style="color: var(--color-accent);"
+      >
+        Experiencia Profesional
+      </span>
+      <h2
+        class="text-3xl sm:text-4xl font-bold"
+        style={`color: var(--color-primary-dark); font-family: 'DM Serif Display', serif;`}
+      >
+        Trayectoria
+      </h2>
+      <div class="w-16 h-1 mt-4 mx-auto rounded-full" style="background-color: var(--color-accent);"></div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative">
+      <!-- Vertical line (desktop: center, mobile: left) -->
+      <div
+        class="absolute left-4 sm:left-1/2 sm:-translate-x-px top-0 bottom-0 w-0.5"
+        style="background-color: var(--color-surface);"
+      ></div>
+
+      <!-- Entries -->
+      <div class="flex flex-col gap-10 sm:gap-12">
+        {siteConfig.experience.map((exp, i) => {
+          const isLeft = i % 2 === 0;
+          return (
+            <div class={`reveal stagger-${Math.min(i + 1, 6)} relative flex flex-col sm:flex-row items-start`}>
+              <!-- Dot on timeline -->
+              <div
+                class="absolute left-4 sm:left-1/2 top-1 w-3 h-3 rounded-full -translate-x-1/2 z-10 border-2 border-white"
+                style={`background-color: var(--color-primary-light);`}
+              ></div>
+
+              {/* Desktop: alternating sides */}
+              <div class={`hidden sm:flex w-full ${isLeft ? 'flex-row' : 'flex-row-reverse'}`}>
+                {/* Date side */}
+                <div class={`w-1/2 ${isLeft ? 'pr-10 text-right' : 'pl-10 text-left'}`}>
+                  <p
+                    class="text-sm font-mono font-semibold"
+                    style={`color: var(--color-primary-light); font-family: 'JetBrains Mono', monospace;`}
+                  >
+                    {exp.dateRange}
+                  </p>
+                  <p class="text-xs text-gray-400 mt-1">
+                    📍 {exp.location}
+                  </p>
+                </div>
+
+                {/* Content side */}
+                <div class={`w-1/2 ${isLeft ? 'pl-10' : 'pr-10'}`}>
+                  <div class="bg-white rounded-xl p-5 border border-gray-100 shadow-sm card-hover">
+                    <h3
+                      class="text-base font-bold"
+                      style={`color: var(--color-primary-dark);`}
+                    >
+                      {exp.company}
+                    </h3>
+                    <p
+                      class="text-sm font-medium mt-1"
+                      style="color: var(--color-primary);"
+                    >
+                      {exp.title}
+                    </p>
+                    <ul class="mt-3 space-y-1.5">
+                      {exp.bullets.map((bullet) => (
+                        <li class="flex items-start gap-2 text-sm text-gray-600">
+                          <span
+                            class="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0"
+                            style="background-color: var(--color-accent);"
+                          ></span>
+                          {bullet}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile: all on right side */}
+              <div class="sm:hidden pl-10 w-full">
+                <p
+                  class="text-xs font-mono font-semibold"
+                  style={`color: var(--color-primary-light); font-family: 'JetBrains Mono', monospace;`}
+                >
+                  {exp.dateRange}
+                </p>
+                <p class="text-xs text-gray-400 mt-0.5">
+                  📍 {exp.location}
+                </p>
+                <div class="mt-2 bg-white rounded-xl p-4 border border-gray-100 shadow-sm">
+                  <h3
+                    class="text-sm font-bold"
+                    style={`color: var(--color-primary-dark);`}
+                  >
+                    {exp.company}
+                  </h3>
+                  <p
+                    class="text-xs font-medium mt-0.5"
+                    style="color: var(--color-primary);"
+                  >
+                    {exp.title}
+                  </p>
+                  <ul class="mt-2 space-y-1">
+                    {exp.bullets.map((bullet) => (
+                      <li class="flex items-start gap-2 text-xs text-gray-600">
+                        <span
+                          class="w-1 h-1 rounded-full mt-1.5 shrink-0"
+                          style="background-color: var(--color-accent);"
+                        ></span>
+                        {bullet}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  </div>
+</section>

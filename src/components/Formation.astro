@@ -1,0 +1,140 @@
+---
+import { siteConfig } from "../config";
+---
+
+<section id="formacion" class="py-16 sm:py-20 lg:py-24" style="background-color: var(--color-surface);">
+  <div class="max-w-6xl mx-auto px-5">
+    <!-- Section header -->
+    <div class="text-center mb-14 reveal">
+      <span
+        class="inline-block text-xs font-semibold tracking-widest uppercase mb-3"
+        style="color: var(--color-accent);"
+      >
+        Formación Académica
+      </span>
+      <h2
+        class="text-3xl sm:text-4xl font-bold"
+        style={`color: var(--color-primary-dark); font-family: 'DM Serif Display', serif;`}
+      >
+        Educación y Certificaciones
+      </h2>
+      <div class="w-16 h-1 mt-4 mx-auto rounded-full" style="background-color: var(--color-accent);"></div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14">
+
+      <!-- Left: Education -->
+      <div class="reveal-left">
+        <div class="flex items-center gap-3 mb-6">
+          <div
+            class="w-10 h-10 rounded-xl flex items-center justify-center"
+            style="background-color: var(--color-primary-dark);"
+          >
+            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" />
+            </svg>
+          </div>
+          <h3
+            class="text-2xl font-bold"
+            style={`color: var(--color-primary-dark); font-family: 'DM Serif Display', serif;`}
+          >
+            Educación
+          </h3>
+        </div>
+
+        <div class="space-y-6">
+          {siteConfig.education.map((edu) => (
+            <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 card-hover">
+              <div class="flex items-start justify-between gap-4">
+                <div class="flex-1">
+                  <h4
+                    class="text-base font-bold"
+                    style="color: var(--color-primary-dark);"
+                  >
+                    {edu.school}
+                  </h4>
+                  {edu.location && (
+                    <p class="text-xs text-gray-400 mt-0.5">{edu.location}</p>
+                  )}
+                  <p
+                    class="text-sm font-medium mt-1"
+                    style="color: var(--color-primary);"
+                  >
+                    {edu.degree}
+                  </p>
+                </div>
+                <span
+                  class="text-xs font-mono whitespace-nowrap shrink-0 px-2 py-1 rounded-lg"
+                  style={`background-color: var(--color-surface); color: var(--color-primary-light); font-family: 'JetBrains Mono', monospace;`}
+                >
+                  {edu.dateRange}
+                </span>
+              </div>
+              {edu.achievements && edu.achievements.length > 0 && (
+                <div class="mt-3 flex flex-wrap gap-2">
+                  {edu.achievements.map((a) => (
+                    <span
+                      class="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-full font-medium"
+                      style={`background-color: var(--color-accent); color: var(--color-primary-dark);`}
+                    >
+                      <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                      {a}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Right: Certifications -->
+      <div class="reveal-right stagger-2">
+        <div class="flex items-center gap-3 mb-6">
+          <div
+            class="w-10 h-10 rounded-xl flex items-center justify-center"
+            style="background-color: var(--color-primary-dark);"
+          >
+            <svg class="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+            </svg>
+          </div>
+          <h3
+            class="text-2xl font-bold"
+            style={`color: var(--color-primary-dark); font-family: 'DM Serif Display', serif;`}
+          >
+            Certificaciones
+          </h3>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+          <ul class="space-y-4">
+            {siteConfig.certifications.map((cert, i) => (
+              <li class={`flex items-start gap-3 ${i < siteConfig.certifications.length - 1 ? 'pb-4 border-b border-gray-100' : ''}`}>
+                <div
+                  class="w-2 h-2 rounded-full mt-2 shrink-0"
+                  style="background-color: var(--color-accent);"
+                ></div>
+                <div class="flex-1">
+                  <p
+                    class="text-sm font-semibold"
+                    style="color: var(--color-primary-dark);"
+                  >
+                    {cert.name}
+                  </p>
+                  <p class="text-xs text-gray-500 mt-0.5">
+                    {cert.institution}
+                    {cert.year && ` · ${cert.year}`}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

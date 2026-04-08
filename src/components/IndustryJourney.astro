@@ -1,0 +1,126 @@
+---
+import { siteConfig } from "../config";
+---
+
+<section id="recorrido" class="py-16 sm:py-20 lg:py-24 overflow-hidden" style="background-color: var(--color-primary-dark);">
+  <div class="max-w-6xl mx-auto px-5">
+    <!-- Section header -->
+    <div class="text-center mb-14 reveal">
+      <span
+        class="inline-block text-xs font-semibold tracking-widest uppercase mb-3"
+        style="color: var(--color-accent);"
+      >
+        4 Industrias, 1 Visión
+      </span>
+      <h2
+        class="text-3xl sm:text-4xl font-bold text-white"
+        style="font-family: 'DM Serif Display', serif;"
+      >
+        Recorrido Industrial
+      </h2>
+      <div class="w-16 h-1 mt-4 mx-auto rounded-full" style="background-color: var(--color-accent);"></div>
+    </div>
+
+    <!-- Desktop: Horizontal journey -->
+    <div class="hidden lg:block">
+      <div class="relative">
+        <!-- Connecting line -->
+        <div class="absolute top-[52px] left-[10%] right-[10%] h-0.5 opacity-30" style="background-color: var(--color-primary-light);">
+          <div class="journey-line-h absolute top-0 left-0 h-full" style="background-color: var(--color-accent);"></div>
+        </div>
+
+        <!-- Nodes -->
+        <div class="grid grid-cols-4 gap-6 relative">
+          {siteConfig.industryJourney.map((node, i) => (
+            <div class={`journey-node flex flex-col items-center text-center`}>
+              <!-- Icon circle -->
+              <div
+                class="relative z-10 w-[104px] h-[104px] rounded-full flex items-center justify-center text-4xl border-2 shadow-lg mb-5"
+                style={`background-color: var(--color-primary); border-color: var(--color-accent); box-shadow: 0 0 30px rgba(201,168,76,0.15);`}
+              >
+                <span>{node.icon}</span>
+              </div>
+
+              <!-- Industry name -->
+              <h3
+                class="text-lg font-bold text-white mb-1"
+                style="font-family: 'DM Serif Display', serif;"
+              >
+                {node.industry}
+              </h3>
+
+              <!-- Period -->
+              <p
+                class="text-xs font-mono mb-2"
+                style={`color: var(--color-accent); font-family: 'JetBrains Mono', monospace;`}
+              >
+                {node.period}
+              </p>
+
+              <!-- Company & role -->
+              <p class="text-sm text-gray-300 mb-1">{node.company}</p>
+              <p class="text-xs text-gray-400 mb-3">{node.role}</p>
+
+              <!-- Metric badge -->
+              <span
+                class="inline-block text-xs font-semibold px-3 py-1.5 rounded-full"
+                style={`background-color: var(--color-accent); color: var(--color-primary-dark);`}
+              >
+                {node.metric}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile: Vertical journey -->
+    <div class="lg:hidden">
+      <div class="relative pl-10">
+        <!-- Vertical line -->
+        <div class="absolute left-[18px] top-0 bottom-0 w-0.5 opacity-30" style="background-color: var(--color-primary-light);">
+          <div class="journey-line absolute top-0 left-0 w-full" style="background-color: var(--color-accent);"></div>
+        </div>
+
+        <!-- Nodes -->
+        <div class="flex flex-col gap-10">
+          {siteConfig.industryJourney.map((node, i) => (
+            <div class="journey-node relative">
+              <!-- Node dot on the line -->
+              <div
+                class="absolute -left-10 top-1 w-9 h-9 rounded-full flex items-center justify-center text-lg border-2 z-10"
+                style={`background-color: var(--color-primary); border-color: var(--color-accent);`}
+              >
+                <span>{node.icon}</span>
+              </div>
+
+              <!-- Content -->
+              <div>
+                <h3
+                  class="text-lg font-bold text-white"
+                  style="font-family: 'DM Serif Display', serif;"
+                >
+                  {node.industry}
+                </h3>
+                <p
+                  class="text-xs font-mono mt-1"
+                  style={`color: var(--color-accent); font-family: 'JetBrains Mono', monospace;`}
+                >
+                  {node.period}
+                </p>
+                <p class="text-sm text-gray-300 mt-2">{node.company}</p>
+                <p class="text-xs text-gray-400">{node.role}</p>
+                <span
+                  class="inline-block text-xs font-semibold px-3 py-1 rounded-full mt-3"
+                  style={`background-color: var(--color-accent); color: var(--color-primary-dark);`}
+                >
+                  {node.metric}
+                </span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
