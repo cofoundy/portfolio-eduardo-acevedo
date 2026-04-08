@@ -2,7 +2,7 @@
 
 Portafolio profesional.
 
-**Live:** *Se actualizará después del deploy*
+**Live:** [eduardo-acevedo.cofoundy.dev](https://eduardo-acevedo.cofoundy.dev/)
 
 ## Tech Stack
 
