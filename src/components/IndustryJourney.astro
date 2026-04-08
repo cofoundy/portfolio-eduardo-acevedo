@@ -32,7 +32,7 @@ import { siteConfig } from "../config";
         <!-- Nodes -->
         <div class="grid grid-cols-4 gap-6 relative">
           {siteConfig.industryJourney.map((node, i) => (
-            <div class={`journey-node flex flex-col items-center text-center`}>
+            <div class={`reveal-scale stagger-${i + 1} flex flex-col items-center text-center`}>
               <!-- Icon circle -->
               <div
                 class="relative z-10 w-[104px] h-[104px] rounded-full flex items-center justify-center text-4xl border-2 shadow-lg mb-5"
@@ -85,7 +85,7 @@ import { siteConfig } from "../config";
         <!-- Nodes -->
         <div class="flex flex-col gap-10">
           {siteConfig.industryJourney.map((node, i) => (
-            <div class="journey-node relative">
+            <div class={`reveal stagger-${i + 1} relative`}>
               <!-- Node dot on the line -->
               <div
                 class="absolute -left-10 top-1 w-9 h-9 rounded-full flex items-center justify-center text-lg border-2 z-10"
