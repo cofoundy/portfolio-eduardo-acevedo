@@ -1,0 +1,160 @@
+% CV Profesional — Eduardo Manuel Acevedo Venegas
+% Formato Harvard | Compilar con: buildpdf 'cv-acevedo.tex'
+
+\documentclass[11pt,letterpaper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.6in, top=0.5in, bottom=0.5in]{geometry}
+\usepackage{mathptmx}
+\usepackage{fontawesome5}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{tabularx}
+
+% --- Colors ---
+\definecolor{headrule}{HTML}{2c3e50}
+\definecolor{linkblue}{HTML}{1a5276}
+
+% --- Hyperlinks ---
+\hypersetup{colorlinks=true, urlcolor=linkblue, linkcolor=linkblue, pdfborder={0 0 0}}
+
+% --- Section Formatting (Harvard style) ---
+\titleformat{\section}
+  {\large\bfseries\centering}
+  {}
+  {0em}
+  {\vspace{-0.4em}\hrulefill\quad}[\quad\hrulefill\vspace{-0.4em}]
+\titlespacing{\section}{0pt}{0.6em}{0.3em}
+
+% --- List Formatting ---
+\setlist[itemize]{nosep, left=0pt, label=\textbullet, itemsep=1pt, topsep=2pt}
+
+% --- No page numbers ---
+\pagestyle{empty}
+
+% --- Custom Commands ---
+\newcommand{\entry}[4]{%
+  \noindent\textbf{#1} \hfill #2 \par\nopagebreak
+  \textit{#3} \hfill \textit{#4} \par\nopagebreak
+}
+
+\begin{document}
+
+% ============================================
+% HEADER
+% ============================================
+\begin{center}
+  {\LARGE\bfseries Eduardo Manuel Acevedo Venegas} \\[4pt]
+  \faIcon{map-marker-alt}\enspace Chaclacayo, Lima / Arequipa, Per\'u
+  \quad\faIcon{envelope}\enspace \href{mailto:eduardo.mav1992@gmail.com}{eduardo.mav1992@gmail.com}
+  \quad\faIcon{phone}\enspace +51 925 311 822
+  \\[2pt]
+  \faIcon{linkedin}\enspace \href{https://www.linkedin.com/in/eduardo-acevedo-038571164/}{linkedin.com/in/eduardo-acevedo}
+\end{center}
+
+\vspace{-0.4em}
+\noindent\rule{\textwidth}{0.8pt}
+\vspace{-0.8em}
+
+% ============================================
+% EXPERIENCIA PROFESIONAL
+% ============================================
+\section{Experiencia Profesional}
+
+\entry{CHAVITO DOS E.I.R.L}{Arequipa}{Sub Gerente de Administraci\'on y Operaciones}{Ene 2024 --- Actual}
+\begin{itemize}
+  \item Supervisa operaciones integrales de almacenes, compras, distribuci\'on y log\'istica para operaciones mineras, asegurando disponibilidad de recursos cr\'iticos.
+  \item Implementa mejoras en procesos operativos orientadas a eficiencia y reducci\'on de costos en toda la cadena de suministro.
+  \item Lidera equipo operativo y gestiona presupuesto anual alineando recursos a objetivos estrat\'egicos de la empresa.
+  \item Planifica utilizaci\'on de recursos humanos y materiales para operaciones en r\'egimen minero en Arequipa.
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Distribuidores Mineros Santa Mar\'ia I E.I.R.L}{Lima}{Jefe de Operaciones}{Ago 2020 --- Dic 2023}
+\begin{itemize}
+  \item Administr\'o cadena de abastecimiento desde importaciones internacionales hasta destino final en minas del sur y norte del Per\'u.
+  \item Gener\'o ahorro anual de \textasciitilde{}20\% en compras e importaciones internacionales mediante negociaci\'on con proveedores globales.
+  \item Increment\'o productividad operativa en m\'as de 20\% a trav\'es de reestructuraci\'on de procesos log\'isticos.
+  \item Gestion\'o inventario y auditor\'ia de insumos qu\'imicos fiscalizados (MATPEL/IQBF) con compliance regulatorio ante SUNAT, Sunafil, Osinergmin y MTC.
+  \item Dirigi\'o equipo de 35+ personas y administr\'o contratos con empresas tercerizadas de perforaci\'on, combustible y desorci\'on.
+\end{itemize}
+\vspace{0.3em}
+
+\entry{APC Corporaci\'on S.A}{Lima}{Administrador de Campamento}{Ago 2019 --- Abr 2020}
+\begin{itemize}
+  \item Administr\'o campamento minero: apertura/cierre de operaciones, gesti\'on de caja, stocks e inventarios.
+  \item Asegur\'o cumplimiento SIG (Calidad, Seguridad, Salud Ocupacional, Ambiental) con informes semanales y mensuales.
+  \item Control\'o raciones, mermas e insumos coordinando con equipo de cocina y producci\'on.
+\end{itemize}
+\vspace{0.3em}
+
+\entry{SAM FOOD S.A.C}{Lima}{Administrador General}{Ago 2018 --- Jul 2019}
+\begin{itemize}
+  \item Supervis\'o producci\'on alimentaria y gestion\'o presupuesto semanal para 3 concesiones con INCHCAPE.
+  \item Logr\'o incremento de +25\% en productividad anual mediante plan estrat\'egico integral.
+  \item Extendi\'o y mejor\'o condiciones de cr\'edito con proveedores clave, optimizando capital de trabajo.
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Aeropuertos del Per\'u S.A}{Lima}{Auxiliar de Recursos Humanos}{Ago 2017 --- Jun 2018}
+\begin{itemize}
+  \item Gestion\'o horas extras, T-Registro y n\'ominas para 12 aeropuertos nacionales.
+  \item Oper\'o sistema SAP (SOLPED/OC) para procesamiento de CTS, utilidades y liquidaciones.
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Chacla's Camp S.A.C}{Lima}{Administrador}{Ene 2016 --- Jun 2017}
+\begin{itemize}
+  \item Dise\~n\'o estrategias de venta y marketing para club campestre, reduciendo p\'erdidas hasta en 20\%.
+  \item Implement\'o programas de rotaci\'on de personal para mejorar eficiencia operativa.
+\end{itemize}
+\vspace{0.3em}
+
+% ============================================
+% EDUCACI\'ON
+% ============================================
+\section{Educaci\'on}
+
+\entry{Universidad Peruana Uni\'on}{Lima, Per\'u}{Lic. en Administraci\'on y Negocios Internacionales}{2013 --- 2017}
+\begin{itemize}
+  \item T\'itulo Profesional otorgado en septiembre de 2020. Licenciado colegiado.
+\end{itemize}
+\vspace{0.3em}
+
+\entry{Universidad San Sebasti\'an}{Santiago de Chile}{Lic. en Administraci\'on}{2010 --- 2012}
+\begin{itemize}
+  \item Formaci\'on internacional en gesti\'on y administraci\'on de empresas.
+\end{itemize}
+\vspace{0.3em}
+
+% ============================================
+% CERTIFICACIONES Y DIPLOMADOS
+% ============================================
+\section{Certificaciones y Diplomados}
+
+\begin{itemize}
+  \item \textbf{Direcci\'on de Supply Chain Management} --- ISIL (2023)
+  \item \textbf{Gesti\'on y Manejo de IQBF} --- S\'ech\'e Group PERtti (2023)
+  \item \textbf{Gesti\'on de Operaciones y Producci\'on} --- ISIL (2022)
+  \item \textbf{Diplomado en Recursos Humanos} --- Zegel IPAE (2020--2021, 152 hrs)
+  \item \textbf{Gesti\'on de Contrataciones del Estado} --- PUCP, Escuela de Gobierno (2020, 40 hrs)
+  \item \textbf{Gesti\'on de Seguridad en Materiales Peligrosos MATPEL I-II-III}
+  \item \textbf{Gesti\'on Minera} --- En curso
+\end{itemize}
+\vspace{0.3em}
+
+% ============================================
+% COMPETENCIAS
+% ============================================
+\section{Competencias}
+
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\textbf{T\'ecnicas:} & Operaciones, Supply Chain, IQBF/MATPEL, SAP, Presupuestos, Log\'istica, Importaciones, Auditor\'ia, BPM/BPA, Compliance regulatorio (SUNAT, Sunafil, Osinergmin) \\[3pt]
+\textbf{Gesti\'on:} & Liderazgo de equipos (+35 personas), Negociaci\'on, Toma de decisiones bajo presi\'on, Planificaci\'on estrat\'egica, An\'alisis operativo \\[3pt]
+\textbf{Industrias:} & Miner\'ia, Alimentaci\'on/Food Service, Aeropuertos/Transporte, Hospitalidad \\
+\end{tabularx}
+
+\end{document}
