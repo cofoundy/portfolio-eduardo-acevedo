@@ -190,6 +190,12 @@ export const siteConfig = {
 
   education: [
     {
+      school: "Maestría en Administración y Dirección de Empresas",
+      degree: "Mención MBA Supply Chain Management",
+      dateRange: "En curso",
+      achievements: ["Cursando actualmente"],
+    },
+    {
       school: "Universidad Peruana Unión",
       degree: "Lic. en Administración y Negocios Internacionales",
       dateRange: "2013 — 2017",
@@ -236,8 +242,8 @@ export const siteConfig = {
       year: "",
     },
     {
-      name: "Gestión Minera",
-      institution: "En curso",
+      name: "Diplomado en Gestión Minera",
+      institution: "2015",
       year: "",
     },
   ],
